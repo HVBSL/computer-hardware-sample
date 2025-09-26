@@ -27,7 +27,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
             <Monitor className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">TechPro</span>
+            <span className="text-2xl font-bold text-gray-900">ConginteTZ</span>
           </div>
 
           <div className="hidden md:block">

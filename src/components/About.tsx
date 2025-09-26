@@ -1,8 +1,40 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import aboutImage from '../assets/about-image.jpeg';
+import heroBackground from '../assets/hero-background.jpeg';
+import product1 from '../assets/product1.jpeg';
+import product2 from '../assets/product2.jpeg';
+import product3 from '../assets/product3.jpeg';
+import product4 from '../assets/product4.jpeg';
 import { Shield, Zap, Users, Award } from 'lucide-react';
 
 const About = () => {
+  const slides = [
+    { src: aboutImage, alt: 'Tech solutions workspace' },
+    { src: heroBackground, alt: 'Hardware showcase background' },
+    { src: product1, alt: 'Featured product 1' },
+    { src: product2, alt: 'Featured product 2' },
+    { src: product3, alt: 'Featured product 3' },
+    { src: product4, alt: 'Featured product 4' }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToSlide = (index: number) => {
+    const total = slides.length;
+    const nextIndex = ((index % total) + total) % total;
+    setCurrentIndex(nextIndex);
+  };
+
+  const nextSlide = () => goToSlide(currentIndex + 1);
+  const prevSlide = () => goToSlide(currentIndex - 1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
   const features = [
     {
       icon: Shield,
@@ -54,12 +86,49 @@ const About = () => {
           </div>
               
           <div className="relative">
-            <img 
-              src={aboutImage}
-              alt="Tech Solutions"
-              className="rounded-2xl shadow-2xl"
-            />
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-blue-600/20 to-transparent"></div>
+            <div className="overflow-hidden rounded-2xl shadow-2xl">
+              <div
+                className="flex transition-transform duration-700 ease-out"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                {slides.map((slide, idx) => (
+                  <div key={idx} className="min-w-full h-full relative">
+                    <img
+                      src={slide.src}
+                      alt={slide.alt}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-blue-600/20 to-transparent pointer-events-none"></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <button
+              aria-label="Previous slide"
+              onClick={prevSlide}
+              className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-md backdrop-blur transition"
+            >
+              <span className="text-xl">‹</span>
+            </button>
+            <button
+              aria-label="Next slide"
+              onClick={nextSlide}
+              className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-md backdrop-blur transition"
+            >
+              <span className="text-xl">›</span>
+            </button>
+
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+              {slides.map((_, idx) => (
+                <button
+                  key={idx}
+                  aria-label={`Go to slide ${idx + 1}`}
+                  onClick={() => goToSlide(idx)}
+                  className={`${idx === currentIndex ? 'bg-white' : 'bg-white/60'} w-2.5 h-2.5 rounded-full shadow`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 

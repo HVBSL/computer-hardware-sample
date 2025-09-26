@@ -7,37 +7,31 @@ const Services = () => {
       icon: Monitor,
       title: 'Computer Repair',
       description: 'Comprehensive desktop and laptop repair services including hardware diagnostics and software troubleshooting.',
-      price: 'From $75'
     },
     {
       icon: Server,
       title: 'Server Management',
       description: 'Enterprise server setup, maintenance, and monitoring for optimal business operations and security.',
-      price: 'From $300/mo'
     },
     {
       icon: Wifi,
       title: 'Network Setup',
       description: 'Professional network configuration, security implementation, and wireless connectivity solutions.',
-      price: 'From $150'
     },
     {
       icon: Shield,
       title: 'Virus Removal',
       description: 'Complete malware detection, removal, and system protection with ongoing security monitoring.',
-      price: 'From $100'
     },
     {
       icon: HardDrive,
       title: 'Data Recovery',
       description: 'Advanced data recovery services for corrupted drives, deleted files, and system failures.',
-      price: 'From $200'
     },
     {
       icon: Smartphone,
       title: 'IT Consulting',
       description: 'Strategic technology planning, system optimization, and digital transformation guidance.',
-      price: 'From $125/hr'
     }
   ];
 
@@ -62,7 +56,6 @@ const Services = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors duration-200">
                   Learn More
                 </button>

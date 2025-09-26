@@ -1,43 +1,38 @@
-import React from 'react';
-import product1 from '../assets/product1.jpeg';
-import product2 from '../assets/product2.jpeg';
-import product3 from '../assets/product3.jpeg';
-import product4 from '../assets/product4.jpeg';
 import { Star } from 'lucide-react';
+import biometricsImg from '../assets/Biometrics.jpg';
+import cctvImg from '../assets/Camera.jpg';
+import printerImg from '../assets/Printer.jpg';
+import computerPartsImg from '../assets/ComputerParts.jpg';
 
 const Products = () => {
   const products = [
     {
-      name: 'TechPro Gaming Desktop',
-      price: '$1,299',
-      image: product1,
-      specs: ['Intel i7 Processor', '16GB RAM', 'RTX 3060 Graphics', '1TB SSD'],
-      rating: 4.9,
-      reviews: 127
-    },
-    {
-      name: 'Business Laptop Pro',
-      price: '$899',
-      image: product2,
-      specs: ['Intel i5 Processor', '8GB RAM', 'Integrated Graphics', '512GB SSD'],
-      rating: 4.7,
-      reviews: 89
-    },
-    {
-      name: 'Enterprise Server Rack',
-      price: '$2,499',
-      image: product3,
-      specs: ['Dual Xeon CPUs', '64GB RAM', 'RAID Storage', '24/7 Support'],
+      name: 'Biometrics',
+      image: biometricsImg,
+      specs: ['Fingerprint & Face Access', 'Attendance Systems', 'Cloud & On-Prem', 'Installation & Support'],
       rating: 4.8,
-      reviews: 45
+      reviews: 112
     },
     {
-      name: 'All-in-One Workstation',
-      price: '$1,599',
-      image: product4,
-      specs: ['27" 4K Display', 'i7 Processor', '16GB RAM', '1TB Storage'],
+      name: 'CCTV',
+      image: cctvImg,
+      specs: ['IP & Analog Cameras', 'NVR/DVR Solutions', 'Remote Monitoring', 'Indoor & Outdoor'],
+      rating: 4.7,
+      reviews: 156
+    },
+    {
+      name: 'Printer',
+      image: printerImg,
+      specs: ['Laser & Ink Tank', 'Mono & Color', 'Network Printing', 'Toner & Cartridge Supply'],
       rating: 4.6,
-      reviews: 73
+      reviews: 98
+    },
+    {
+      name: 'Computer Parts',
+      image: computerPartsImg,
+      specs: ['CPUs, RAM, SSDs', 'Motherboards & GPUs', 'PSUs & Cabinets', 'Peripherals & Accessories'],
+      rating: 4.9,
+      reviews: 203
     }
   ];
 
@@ -49,7 +44,7 @@ const Products = () => {
             Featured <span className="text-blue-600">Hardware</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            High-performance computing solutions designed for gaming, business, and enterprise applications.
+            Security and office hardware solutions: biometrics, CCTV, printers, and quality computer parts.
           </p>
         </div>
 
@@ -93,7 +88,6 @@ const Products = () => {
                 </ul>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-blue-600">{product.price}</span>
                   <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium transition-colors duration-200">
                     Buy Now
                   </button>
