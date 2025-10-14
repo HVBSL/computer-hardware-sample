@@ -47,7 +47,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                  <p className="text-gray-600">+1 (555) 123-TECH</p>
+                  <p className="text-gray-600">+91 91503 51005</p>
                   <p className="text-sm text-gray-500">24/7 Emergency Support</p>
                 </div>
               </div>
@@ -58,7 +58,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                  <p className="text-gray-600">support@techpro.com</p>
+                  <p className="text-gray-600">conginiteczteam@conginitecz.com</p>
                   <p className="text-sm text-gray-500">Response within 2 hours</p>
                 </div>
               </div>

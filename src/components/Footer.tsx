@@ -47,7 +47,7 @@ const Footer = () => {
                 { name: 'Home', id: 'hero' },
                 { name: 'About', id: 'about' },
                 { name: 'Services', id: 'services' },
-                { name: 'Team', id: 'team' },
+                // { name: 'Team', id: 'team' },
                 { name: 'Products', id: 'products' },
                 { name: 'Contact', id: 'contact' }
               ].map((item) => (
@@ -68,11 +68,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">+1 (555) 123-TECH</span>
+                <span className="text-gray-300">+91 91503 51005</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">support@techpro.com</span>
+                <span className="text-gray-300">conginiteczteam@conginitecz.com</span>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400 mt-0.5" />
@@ -89,10 +89,10 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-300 text-sm">
-              © 2025 TechPro Solutions. All rights reserved.
+              © 2025 ConginteTZ. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+              {/* <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
                 Privacy Policy
               </a>
               <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
@@ -100,7 +100,7 @@ const Footer = () => {
               </a>
               <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
                 Cookie Policy
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

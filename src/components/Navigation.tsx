@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Monitor } from 'lucide-react';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo.png';
+import logo2 from '../assets/TEXT_logo.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +28,8 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <Monitor className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">ConginteTZ</span>
+            <img src={logo} alt="logo" className="h-12 w-12" />
+            <img src={logo2} alt="logo" className="h-8" />
           </div>
 
           <div className="hidden md:block">
@@ -36,7 +38,6 @@ const Navigation = () => {
                 { name: 'Home', id: 'hero' },
                 { name: 'About', id: 'about' },
                 { name: 'Services', id: 'services' },
-                { name: 'Team', id: 'team' },
                 { name: 'Products', id: 'products' },
                 { name: 'Contact', id: 'contact' }
               ].map((item) => (
@@ -77,7 +78,6 @@ const Navigation = () => {
                 { name: 'Home', id: 'hero' },
                 { name: 'About', id: 'about' },
                 { name: 'Services', id: 'services' },
-                { name: 'Team', id: 'team' },
                 { name: 'Products', id: 'products' },
                 { name: 'Contact', id: 'contact' }
               ].map((item) => (

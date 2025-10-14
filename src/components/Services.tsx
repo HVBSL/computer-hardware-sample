@@ -1,37 +1,51 @@
-import React from 'react';
-import { Monitor, Server, Smartphone, Shield, HardDrive, Wifi } from 'lucide-react';
+import { Monitor, Server, Camera, Shield, HardDrive, Printer, Laptop, Network, Settings } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: Monitor,
-      title: 'Computer Repair',
-      description: 'Comprehensive desktop and laptop repair services including hardware diagnostics and software troubleshooting.',
+      icon: Laptop,
+      title: 'Laptop Sales & Service',
+      description: 'All brand laptop sales, repairs, upgrades, and maintenance. Free diagnosis & transparent pricing.',
     },
     {
       icon: Server,
-      title: 'Server Management',
-      description: 'Enterprise server setup, maintenance, and monitoring for optimal business operations and security.',
-    },
-    {
-      icon: Wifi,
-      title: 'Network Setup',
-      description: 'Professional network configuration, security implementation, and wireless connectivity solutions.',
+      title: 'Server Sales & Service',
+      description: 'Enterprise server solutions, maintenance, and configuration. Custom-built and refurbished options.',
     },
     {
       icon: Shield,
-      title: 'Virus Removal',
-      description: 'Complete malware detection, removal, and system protection with ongoing security monitoring.',
+      title: 'Biometric Devices',
+      description: 'Fingerprint scanners, face recognition, and access control systems with professional installation.',
+    },
+    {
+      icon: Camera,
+      title: 'CCTV & Security',
+      description: 'IP cameras, NVR/DVR setup, remote access, and complete surveillance solutions.',
+    },
+    {
+      icon: Network,
+      title: 'Network Setup',
+      description: 'Office LAN, Wi-Fi optimization, firewall configuration, and structured cabling services.',
+    },
+    {
+      icon: Printer,
+      title: 'Printer Sales & Service',
+      description: 'All major printer brands, installation, maintenance, and cartridge services.',
+    },
+    {
+      icon: Monitor,
+      title: 'Desktop Sales & Service',
+      description: 'Custom-built desktops, repairs, upgrades, and comprehensive maintenance services.',
     },
     {
       icon: HardDrive,
       title: 'Data Recovery',
-      description: 'Advanced data recovery services for corrupted drives, deleted files, and system failures.',
+      description: 'Laptop and server data recovery from hardware failures and accidental deletion.',
     },
     {
-      icon: Smartphone,
-      title: 'IT Consulting',
-      description: 'Strategic technology planning, system optimization, and digital transformation guidance.',
+      icon: Settings,
+      title: 'AMC Services',
+      description: 'Annual maintenance contracts with priority support and preventive maintenance.',
     }
   ];
 
@@ -47,7 +61,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group hover:transform hover:-translate-y-2">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
@@ -67,18 +81,18 @@ const Services = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center justify-center space-x-8 bg-white rounded-2xl px-12 py-8 shadow-lg">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">1500+</div>
+              <div className="text-gray-600">Happy Clients</div>
             </div>
             <div className="h-12 w-px bg-gray-300"></div>
             <div className="text-center">
               <div className="text-3xl font-bold text-green-600 mb-2">2Hr</div>
-              <div className="text-gray-600">Response</div>
+              <div className="text-gray-600">Response Time</div>
             </div>
             <div className="h-12 w-px bg-gray-300"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
-              <div className="text-gray-600">Systems Sold</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">98%</div>
+              <div className="text-gray-600">Success Rate</div>
             </div>
           </div>
         </div>
