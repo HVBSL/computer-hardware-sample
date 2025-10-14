@@ -1,7 +1,9 @@
-import React from 'react';
 import { Monitor, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Footer = () => {
+  const [ref, isVisible] = useScrollAnimation();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -10,13 +12,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer ref={ref} className={`bg-gray-900 dark:bg-slate-950 text-white transition-colors duration-300 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <Monitor className="h-8 w-8 text-blue-400" />
-              <span className="text-2xl font-bold">TechPro</span>
+              <span className="text-2xl font-bold">ConginteTZ</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
               Your trusted partner for comprehensive computer hardware, networking solutions, and expert technical support. 

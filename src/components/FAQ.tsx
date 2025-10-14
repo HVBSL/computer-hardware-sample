@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [ref, isVisible] = useScrollAnimation();
 
   const faqs = [
     {
@@ -36,34 +38,34 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section ref={ref} className={`py-20 bg-gray-50 dark:bg-slate-800 transition-colors duration-300 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Frequently Asked <span className="text-blue-600">Questions</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Frequently Asked <span className="text-blue-600 dark:text-blue-400">Questions</span>
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 dark:text-gray-300">
             Find answers to common questions about our services and support.
           </p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div key={index} className={`bg-white dark:bg-slate-700 rounded-2xl shadow-lg overflow-hidden hover-lift ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: `${index * 0.1}s` }}>
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors duration-200"
               >
-                <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{faq.question}</h3>
                 {openIndex === index ? (
-                  <ChevronUp className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                  <ChevronUp className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="h-6 w-6 text-gray-400 flex-shrink-0" />
+                  <ChevronDown className="h-6 w-6 text-gray-400 dark:text-gray-500 flex-shrink-0" />
                 )}
               </button>
               {openIndex === index && (
                 <div className="px-8 pb-6">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>

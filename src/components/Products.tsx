@@ -37,20 +37,20 @@ const Products = () => {
   ];
 
   return (
-    <section id="products" className="py-20 bg-gray-50">
+    <section id="products" className="py-20 bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Featured <span className="text-blue-600">Hardware</span>
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Featured <span className="text-blue-600 dark:text-blue-400">Hardware</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Security and office hardware solutions: biometrics, CCTV, printers, and quality computer parts.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product, index) => (
-            <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group hover:transform hover:-translate-y-2">
+            <div key={index} className="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group hover:transform hover:-translate-y-2 animate-fade-in-up hover-lift" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="relative overflow-hidden">
                 <img 
                   src={product.image}
@@ -63,7 +63,7 @@ const Products = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{product.name}</h3>
                 
                 <div className="flex items-center mb-4">
                   <div className="flex items-center">
@@ -78,17 +78,17 @@ const Products = () => {
                       />
                     ))}
                   </div>
-                  <span className="ml-2 text-sm text-gray-600">({product.reviews})</span>
+                  <span className="ml-2 text-sm text-gray-600 dark:text-gray-300">({product.reviews})</span>
                 </div>
 
                 <ul className="space-y-1 mb-6">
                   {product.specs.map((spec, specIndex) => (
-                    <li key={specIndex} className="text-sm text-gray-600">• {spec}</li>
+                    <li key={specIndex} className="text-sm text-gray-600 dark:text-gray-300">• {spec}</li>
                   ))}
                 </ul>
 
                 <div className="flex items-center justify-between">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium transition-colors duration-200">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium transition-all duration-200 hover:scale-105">
                     Buy Now
                   </button>
                 </div>
