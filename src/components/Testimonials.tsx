@@ -6,37 +6,37 @@ const Testimonials = () => {
   
   const testimonials = [
     {
-      name: 'Alice Johnson',
+      name: 'Ramakrishnan',
       company: 'TechStart Inc.',
       text: 'Fantastic service! My computer runs faster than ever. The team was professional and completed the repair in record time.',
       rating: 5
     },
     {
-      name: 'Robert Chen',
+      name: 'Kiran Kumar',
       company: 'DataFlow Solutions',
       text: 'Reliable and quick tech support. They solved our server issue in no time and prevented major downtime.',
       rating: 5
     },
     {
-      name: 'Maria Rodriguez',
+      name: 'Santhosh Kumar',
       company: 'Creative Studio',
       text: 'Great value for money. The team is knowledgeable, friendly, and always available when we need support.',
       rating: 5
     },
     {
-      name: 'David Thompson',
+      name: 'Suresh Kumar',
       company: 'Legal Associates',
       text: 'They saved our business with their prompt and effective IT solutions. Highly recommend for any tech needs.',
       rating: 5
     },
     {
-      name: 'Jennifer Lee',
+      name: 'Rajesh Kumar',
       company: 'Medical Practice',
       text: 'The best computer sales and service we\'ve experienced. Professional, reliable, and reasonably priced.',
       rating: 5
     },
     {
-      name: 'Michael Brown',
+      name: 'Vijay Kumar',
       company: 'Consulting Group',
       text: 'Top-tier support for all our tech needs. Their expertise has been invaluable to our business operations.',
       rating: 5

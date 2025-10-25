@@ -5,6 +5,14 @@ import product1 from '../assets/product1.jpeg';
 import product2 from '../assets/product2.jpeg';
 import product3 from '../assets/product3.jpeg';
 import product4 from '../assets/product4.jpeg';
+import laptopServiceImg from '../assets/Laptop-service.jpg';
+import serverServiceImg from '../assets/server-services.jpg';
+import biometricDevicesImg from '../assets/Biometrics.jpg';
+import cctvSecurityImg from '../assets/Camera.jpg';
+import networkSetupImg from '../assets/Network-setup.jpg';
+import printerServiceImg from '../assets/Printer.jpg';
+import dataRecoveryImg from '../assets/data-recovery.jpg';
+import amcServicesImg from '../assets/AMC-Sevices.jpg';
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
@@ -28,7 +36,15 @@ const Hero = () => {
     { src: product1, alt: 'Featured product 1' },
     { src: product2, alt: 'Featured product 2' },
     { src: product3, alt: 'Featured product 3' },
-    { src: product4, alt: 'Featured product 4' }
+    { src: product4, alt: 'Featured product 4' },
+    { src: laptopServiceImg, alt: 'Laptop service' },
+    { src: serverServiceImg, alt: 'Server service' },
+    { src: biometricDevicesImg, alt: 'Biometric devices' },
+    { src: cctvSecurityImg, alt: 'CCTV security' },
+    { src: networkSetupImg, alt: 'Network setup' },
+    { src: printerServiceImg, alt: 'Printer service' },
+    { src: dataRecoveryImg, alt: 'Data recovery' },
+    { src: amcServicesImg, alt: 'AMC services' }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
